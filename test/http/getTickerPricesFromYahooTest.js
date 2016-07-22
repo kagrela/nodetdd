@@ -11,12 +11,12 @@ describe('getTickerPrices', function () {
             return Promise.resolve(['responseA', 'responseB']);
         };
 
-        const processPrices = function(responses) {
+        const extractPrices = function(responses) {
             assert.deepEqual(responses, ['responseA', 'responseB']);
             return [10, 20];
         };
 
-        const result = yield getTickerPrices({fetchPrices, processPrices})(['A', 'B']);
+        const result = yield getTickerPrices({fetchPrices, extractPrices})(['A', 'B']);
 
         assert.deepEqual(result, [['A', 10], ['B', 20]]);
     });
