@@ -21,6 +21,7 @@ describe('read file', function () {
 
         try {
             yield read(__dirname + '/symbols_nonexistant');
+            throw 'should not be here'
         } catch (e) {
             assert.equal(e, 'Cannot read file ' + __dirname + '/symbols_nonexistant');
         }

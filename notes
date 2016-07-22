@@ -19,3 +19,6 @@ Steps:
 - integration tests are scam - combinatorial explosion of cases
 - generators - sync looking async code with co-mocha
 - given/when/then training wheels
+- readFile test
+- start with integration test when you don't understand the problem yet
+- try/catch for generators
