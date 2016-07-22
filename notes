@@ -41,7 +41,7 @@ Steps:
 - skip,xit,only in mocha
 - promise all with failing requests
 - extract prices test
-
+- create main with console.log as printReport
 
 idea:
 - try the same flow for single element. branch out the input
