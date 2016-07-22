@@ -1,8 +1,10 @@
 const assert = require('assert');
 const mocha = require('mocha');
+require('co-mocha');
 
 describe('getTickersFromFile', function () {
-    it('should extract tickers from file', function () {
+    it('should extract tickers from file', function *() {
+        // given
         const readFile = function(fileName) {
             assert.equal(fileName, 'someFile');
             return Promise.resolve('file content');
@@ -14,9 +16,11 @@ describe('getTickersFromFile', function () {
 
         const getTickersFromFile = require('../../lib/file/getTickersFromFile')({readFile, extractTickers});
 
-        return getTickersFromFile('someFile').then(function(tickers) {
-            assert.deepEqual(tickers, ['A', 'B', 'C']);
-        });
+        // when
+        const tickers = yield getTickersFromFile('someFile');
+
+        // then
+        assert.deepEqual(tickers, ['A', 'B', 'C']);
     });
 
 });

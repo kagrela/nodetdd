@@ -28,3 +28,4 @@ Steps:
 - extract tickers test
 - simple algirothm with no collabs - easy to test. people usually only test those
 - move file related functions to file namespace
+- write separate tests - DRY in tests is bad advice
