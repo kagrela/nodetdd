@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "good-guy-http": "1.7.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4"
   }
 }
