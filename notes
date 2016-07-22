@@ -13,3 +13,4 @@ Steps:
 - fake test data, not realistic
 - equals, deepEquals
 - done pattern vs return promise in mocha
+- verifying interactions with pure functions/objects - alternative: mocking library
