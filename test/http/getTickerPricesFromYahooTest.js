@@ -2,7 +2,7 @@ const assert = require('assert');
 const getTickerPrices = require('../../lib/http/getTickerPricesFromYahoo');
 const coMocha = require('co-mocha');
 
-describe('getTickerPrices', function () {
+describe('getTickerPricesFromYahoo', function () {
     it('should return prices for tickers', function *() {
 
         const fetchPrices = function(prices) {

@@ -35,3 +35,12 @@ Steps:
 14:30
 - get tickers from file
 - useful functional utilities: zip - go beyond map/filter/reduce
+- listen to your tests and adjust function names
+- fetch prices test
+- integration tests to learn about HTTP API. statusCode
+- skip,xit,only in mocha
+- promise all with failing requests
+
+
+
+idea: try the same flow for single element. branch out the input
