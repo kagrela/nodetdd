@@ -5,11 +5,12 @@ describe('gettickersfromfile', function () {
     it('should get tickers', function () {
         const readFile = function (file) {
             assert.equal(file, './symbols');
-            return Promise.resolve('A\nB\nC\n');
+            return Promise.resolve('file content');
         }
 
-        const extractTickers = function () {
-            return Promise.resolve(['A', 'B', 'C']);
+        const extractTickers = function (content) {
+            assert.equal(content, 'file content');
+            return ['A', 'B', 'C'];
         }
 
         const gettickersfromfile = require('../lib/gettickersfromfile')({readFile, extractTickers});
