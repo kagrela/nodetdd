@@ -11,5 +11,9 @@
   "dependencies": {
     "good-guy-http": "1.7.2",
     "mocha": "2.5.3"
+  },
+  "devDependencies": {
+    "co-mocha": "1.1.2",
+    "testdouble": "1.6.0"
   }
 }

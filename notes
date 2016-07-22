@@ -14,3 +14,14 @@ Steps:
 - equals, deepEquals
 - done pattern vs return promise in mocha
 - verifying interactions with pure functions/objects - alternative: mocking library
+- test drive getTickersFromFile
+- simple tests over awesome test names
+- integration tests are scam - combinatorial explosion of cases
+- generators - sync looking async code with co-mocha
+- given/when/then training wheels
+- readFile test
+- start with integration test when you don't understand the problem yet
+- try/catch for generators
+- remember about fail in try
+- use integration tests to learn about the problem
+- mocking tool - more magic than pure JS code
