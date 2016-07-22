@@ -4,6 +4,7 @@ London style - good for business apps
 
 
 Steps:
+09:00
 - start with a spike to learn the shape of the problem
 - strategic design on the board
 - hint: use describe/it shortcuts
@@ -25,3 +26,12 @@ Steps:
 - remember about fail in try
 - use integration tests to learn about the problem
 - mocking tool - more magic than pure JS code
+- extract tickers test
+- simple algorithm with no collabs - easy to test. people usually only test those
+- move file related functions to file namespace
+- write separate tests - DRY in tests is bad advice
+- don't use => blindly
+- move refactoring in intellij - useful to update require paths
+14:30
+- get tickers from file
+- useful functional utilities: zip - go beyond map/filter/reduce
