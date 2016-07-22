@@ -18,3 +18,4 @@ Steps:
 - simple tests over awesome test names
 - integration tests are scam - combinatorial explosion of cases
 - generators - sync looking async code with co-mocha
+- given/when/then training wheels
