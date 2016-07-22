@@ -14,4 +14,7 @@ Steps:
 - equals, deepEquals
 - done pattern vs return promise in mocha
 - verifying interactions with pure functions/objects - alternative: mocking library
+- test drive getTickersFromFile
 - simple tests over awesome test names
+- integration tests are scam - combinatorial explosion of cases
+- generators - sync looking async code with co-mocha
