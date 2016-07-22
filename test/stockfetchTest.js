@@ -22,4 +22,18 @@ describe('stockfetch', function () {
         return stockfetch('./symbolsFile');
     });
 
+    it('get tickers from file is failing', function(done) {
+        const getTickersFromFile = function(file) {
+            return Promise.reject('error');
+        };
+
+        const handleError = function(error) {
+            assert.equal(error, 'error');
+        };
+
+        const fetch = require('../lib/stockfetch')({getTickersFromFile, handleError});
+
+        fetch('some_file').then(() => done()).catch(done);
+    });
+
 });

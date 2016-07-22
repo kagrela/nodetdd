@@ -42,6 +42,7 @@ Steps:
 - promise all with failing requests
 - extract prices test
 - create main with console.log as printReport
+- adding error handling for stockfetch
 
 idea:
 - try the same flow for single element. branch out the input
