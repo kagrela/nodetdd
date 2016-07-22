@@ -14,7 +14,7 @@ describe('getTickersFromFile', function () {
             return ['A', 'B', 'C'];
         };
 
-        const getTickersFromFile = require('../lib/getTickersFromFile')({readFile, extractTickers});
+        const getTickersFromFile = require('../../lib/file/getTickersFromFile')({readFile, extractTickers});
 
         // when
         const tickers = yield getTickersFromFile('someFile');

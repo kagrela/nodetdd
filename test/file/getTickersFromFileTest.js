@@ -12,7 +12,7 @@ describe('getTickersFromFile', function () {
             return ['A', 'B', 'C'];
         };
 
-        const getTickersFromFile = require('../lib/getTickersFromFile')({readFile, extractTickers});
+        const getTickersFromFile = require('../../lib/file/getTickersFromFile')({readFile, extractTickers});
 
         return getTickersFromFile('someFile').then(function(tickers) {
             assert.deepEqual(tickers, ['A', 'B', 'C']);

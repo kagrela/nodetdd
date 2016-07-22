@@ -1,6 +1,6 @@
 const assert = require('assert');
 const mocha = require('mocha');
-const readFile = require('../lib/readFile');
+const readFile = require('../../lib/file/readFile');
 const path = require('path');
 const td = require('testdouble');
 require('co-mocha');

@@ -1,5 +1,5 @@
 const assert = require('assert');
-const extractTickers = require('../lib/extractTickers');
+const extractTickers = require('../../lib/file/extractTickers');
 
 describe('Extract tickers', function () {
 

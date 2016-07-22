@@ -25,3 +25,6 @@ Steps:
 - remember about fail in try
 - use integration tests to learn about the problem
 - mocking tool - more magic than pure JS code
+- extract tickers test
+- simple algirothm with no collabs - easy to test. people usually only test those
+- move file related functions to file namespace
