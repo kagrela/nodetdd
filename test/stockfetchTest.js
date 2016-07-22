@@ -13,7 +13,11 @@ describe('stockfetch', function () {
             return Promise.resolve([10, 20, 30]);
         };
 
-        const stockfetch = require('../lib/stockfetch')({getTickersFromFile, getTickerPricesFromYahoo});
+        const printReport = function(prices) {
+            assert.deepEqual(prices, [10, 20, 30]);
+        };
+
+        const stockfetch = require('../lib/stockfetch')({getTickersFromFile, getTickerPricesFromYahoo, printReport});
 
         return stockfetch('./symbolsFile');
     });
