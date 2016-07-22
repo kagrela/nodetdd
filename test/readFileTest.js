@@ -50,7 +50,7 @@ describe('read file', function () {
                 return cb('error');
             }
         };
-        let read = readFile(fs);
+        const read = readFile(fs);
 
         try {
             yield read('file');
