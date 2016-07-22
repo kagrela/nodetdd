@@ -9,3 +9,7 @@ Steps:
 - hint: use describe/it shortcuts
 - super small steps
 - destructuring for args
+- designing async interfaces
+- fake test data, not realistic
+- equals, deepEquals
+- done pattern vs return promise in mocha

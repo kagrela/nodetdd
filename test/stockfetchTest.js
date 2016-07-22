@@ -3,13 +3,19 @@ const mocha = require('mocha');
 
 describe('stockfetch', function () {
     it('happypath', function () {
-        const getTickersFromFile = function(file) {
+        const getTickersFromFile = function (file) {
             assert.equal(file, './symbolsFile');
+            return Promise.resolve(['A', 'B', 'C']);
         };
 
-        const stockfetch = require('../lib/stockfetch')({getTickersFromFile});
+        const getTickerPricesFromYahoo = function (tickers) {
+            assert.deepEqual(tickers, ['A', 'B', 'C']);
+            return Promise.resolve([10, 20, 30]);
+        };
 
-        stockfetch('./symbolsFile');
+        const stockfetch = require('../lib/stockfetch')({getTickersFromFile, getTickerPricesFromYahoo});
+
+        return stockfetch('./symbolsFile');
     });
 
 });
