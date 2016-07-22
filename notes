@@ -40,7 +40,7 @@ Steps:
 - integration tests to learn about HTTP API. statusCode
 - skip,xit,only in mocha
 - promise all with failing requests
-
+- extract prices test
 
 
 idea: try the same flow for single element. branch out the input

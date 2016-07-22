@@ -2,7 +2,7 @@ const assert = require('assert');
 const fetchPrices = require('../../lib/http/fetchPrices');
 
 describe('fetch prices', function () {
-    it.skip('[integration test] should fetch a symbol', function *() {
+    xit('[integration test] should fetch a symbol', function *() {
         const request = require('good-guy-http')();
         const fetch = fetchPrices({request});
 

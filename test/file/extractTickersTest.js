@@ -1,7 +1,7 @@
 const assert = require('assert');
 const extractTickers = require('../../lib/file/extractTickers');
 
-describe('Extract tickers', function () {
+describe('extract tickers', function () {
 
     it('should extract valid tickers', function() {
         const symbols = extractTickers('GOOG\nAAPL')
