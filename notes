@@ -14,3 +14,4 @@ Steps:
 - equals, deepEquals
 - done pattern vs return promise in mocha
 - verifying interactions with pure functions/objects - alternative: mocking library
+- simple tests over awesome test names
