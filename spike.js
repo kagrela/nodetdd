@@ -7,7 +7,8 @@ fs.readFile('./symbols', function(err, data) {
     const tickers = data.toString().split('\n');
 
     // fetch price
-    const requests = tickers.map(t => request('http://ichart.finance.yahoo.com/table.csv?s=' + t));
+    const requests = tickers.map(t =>
+        request('http://ichart.finance.yahoo.com/table.csv?s=' + t));
 
     Promise.all(requests).then(function (results) {
         // process price

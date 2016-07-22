@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "good-guy-http": "1.7.2"
+    "good-guy-http": "1.7.2",
+    "mocha": "2.5.3"
   }
 }
