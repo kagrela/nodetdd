@@ -24,3 +24,4 @@ Steps:
 - try/catch for generators
 - remember about fail in try
 - use integration tests to learn about the problem
+- mocking tool - more magic than pure JS code

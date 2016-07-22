@@ -2,6 +2,7 @@ const assert = require('assert');
 const mocha = require('mocha');
 const readFile = require('../lib/readFile');
 const path = require('path');
+const td = require('testdouble');
 require('co-mocha');
 
 describe('read file', function () {
@@ -31,6 +32,16 @@ describe('read file', function () {
         assert.equal(result, 'content');
     });
 
+    it('[unit test with mocking library] should read content of a file', function *() {
+        const fs = td.object();
+        td.when(fs.readFile('file', 'UTF-8')).thenCallback(null, 'content');
+        const read = readFile(fs);
+
+        const result = yield read('file');
+
+        assert.equal(result, 'content');
+    });
+
     it('[integration test] should fail on nonexistent file', function *() {
         const fs = require('fs');
         const read = readFile(fs);
@@ -51,6 +62,19 @@ describe('read file', function () {
             }
         };
         const read = readFile(fs);
+
+        try {
+            yield read('file');
+            throw 'should not get here';
+        } catch (e) {
+            assert.equal(e, 'Cannot read file file');
+        }
+    });
+
+    it('[unit test with mocking library] should fail on nonexistent file', function *() {
+        const fs = td.object();
+        td.when(fs.readFile('file', 'UTF-8')).thenCallback('error');
+        let read = readFile(fs);
 
         try {
             yield read('file');
