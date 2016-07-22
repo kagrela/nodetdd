@@ -43,4 +43,6 @@ Steps:
 - extract prices test
 
 
-idea: try the same flow for single element. branch out the input
+idea:
+- try the same flow for single element. branch out the input
+- extract price from response does too much
